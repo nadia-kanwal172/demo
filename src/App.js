@@ -62,8 +62,6 @@ return(
       <Row>
         <Col>
         <Table striped bordered hover variant ="dark" >
-         
-          <tbody>
           <thead >
           <tr>
 
@@ -74,6 +72,7 @@ return(
          
           </tr>
           </thead> 
+          <tbody>
             {tasks.map(spell =>(
               <tr key = {spell.id}>
                 <td>{spell.id}</td>
@@ -81,6 +80,7 @@ return(
                 
                 </td>
                 <td><Button variant="danger" onClick={() => onDelete(spell.id)}>
+
                   Delete Task</Button></td>
                   <td>
                     <input type = "text" className = " " placeholder={spell.name} onChange=
